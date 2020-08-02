@@ -3,7 +3,9 @@ package Algorithms;
 public abstract class Sort /*implements Sort_Interface */{
 		int[] data;
 		int arrSize;
+		// 한 바퀴 돌때마다
 		int cnt_Stack;
+		// 한번 바뀔 때마다
 		int cnt_Swap;
 		
 	Sort(){
@@ -102,6 +104,7 @@ public abstract class Sort /*implements Sort_Interface */{
 			result += cnt_Swap;
 		}
 		result /= (double)trials;
+		
 		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 		System.out.printf("+ 사이즈 %4d 의 배열에 대해 %4d 번 테스트하여 다음과 같은 결과를 얻었 습니다. \t +\n", arrSize, trials);
 		System.out.printf("+ 결과 : %6.2f cycles    \t\t\t\t\t + \n", result);
@@ -110,7 +113,8 @@ public abstract class Sort /*implements Sort_Interface */{
 	}
 }
 
-interface Sort_Interface{
+
+interface Sort_Interface {
 	public void reArrange();
 	public void sort();
 	public void print();
