@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.25)
+project(kundol)
+
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(kundol main.cpp ch_0_basic/mm.cpp ch_0_basic/mm.h ch_0_basic/combination_by_recursive.cpp)

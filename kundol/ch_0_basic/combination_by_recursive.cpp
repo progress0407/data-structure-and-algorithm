@@ -29,7 +29,7 @@ int main(){
 	
 	vector<int> b;
 	combi(-1, b);
-	
+
 	return 0;
 }
 
