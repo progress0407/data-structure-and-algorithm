@@ -8,17 +8,17 @@ void print(vector<int> b) {
 	cout << '\n';
 }
 
-void combi(int start, vector<int> b) {
+void combi(int start, vector<int> v) {
 	
-	if(b.size() == k) {
-		print(b);
+	if(v.size() == k) {
+		print(v);
 		return;
 	}
 	
 	for(int i= start + 1; i < n; i++) {
-		b.push_back(i);
-		combi(i, b);
-		b.pop_back();
+		v.push_back(i);
+		combi(i, v);
+		v.pop_back();
 	}
 	
 	return;
@@ -27,8 +27,8 @@ void combi(int start, vector<int> b) {
 
 int main(){
 	
-	vector<int> b;
-	combi(-1, b);
+	vector<int> v;
+	combi(-1, v);
 
 	return 0;
 }
