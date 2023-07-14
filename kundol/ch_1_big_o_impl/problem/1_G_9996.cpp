@@ -1,38 +1,30 @@
-#include <bits/stdc++.h>
-#include <regex>
+#include<bits/stdc++.h>
 
 using namespace std;
-
-/**
- * 한국이 그리울 땐 서버에 접속하지
- */
-
-int N;
-string pattern;
-vector<string> words;
+int n;
+string s, ptn, pre, suf, word;
 
 int main() {
+    cin >> n;
+    cin >> ptn;
+    int pos = ptn.find('*');
+    string st = ptn.substr(0, pos);
+    string ed = ptn.substr(pos + 1);
 
-    cin >> N
-        >> pattern;
-
-    for (int i = 0; i < N; i++) {
-        string word;
+    for (int i = 0; i < n; i++) {
         cin >> word;
-        words.push_back(word);
-    }
 
-    int pos = pattern.find("*");
-    string pre = pattern.substr(0, pos);
-    string suf = pattern.substr(pos + 1);
+        if (word.size() < st.size() + ed.size()) { // 반례
+            cout << "NE\n";
+            continue;
+        }
 
-    for (auto word: words) {
-
-        string ch_f = word.substr(0, pre.size());
-        string ch_b = word.substr(word.size() - suf.size());
-
-        if (pre == ch_f && suf == ch_b) cout << "DA\n";
-        else cout << "NE\n";
+        // 메인 로직
+        if (st == word.substr(0, st.size()) &&
+            ed == word.substr(word.size() - ed.size()))
+            cout << "DA\n";
+        else
+            cout << "NE\n";
     }
 
     return 0;
