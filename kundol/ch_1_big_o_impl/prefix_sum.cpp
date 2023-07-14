@@ -6,6 +6,14 @@ int n, m, a[1004];
 vector<pair<int, int>> pl;
 vector<int> psum;
 
+/**
+ *
+ * 수열의 부분합 특성을 이용한 것
+ *
+ * Sn = Sn-1 +An
+ *
+ */
+
 int main() {
 
     // input
