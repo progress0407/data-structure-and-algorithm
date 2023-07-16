@@ -32,6 +32,13 @@ swap(v[a], v[b]);
 swap(arr[a], arr[b]);
 ```
 
+## reverse
+
+```c++
+string str = "abc";
+reverse(str.begin(), str.end());
+```
+
 ## 숫자 스케일
 
 연산량 계산시 1000만 정도는 나와야 많다고 할 수 있다
@@ -54,3 +61,20 @@ v.erase(remove(v.begin(), v.end(), 값),
 
 `return` 과 달리 main함수까지도 종료한다.  
 
+## map
+
+map에서 첫번째 값 가져오기
+
+```c++
+mp.begin()->second
+```
+
+
+## Stack
+
+```c++
+if(stk.size() && stk.top())
+```
+
+stk.size() 등으로 스택에 원소 존재 유무를 먼저 체크하자.
+그래야 뒷부분에 참조 에러를 막을 수 있다 
