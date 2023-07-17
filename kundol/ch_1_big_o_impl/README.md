@@ -19,6 +19,8 @@ prefix sum, suffix sum이 있는데, 기업형 코테에서는 prefix sum 정도
 
 ## 주몽
 
+예시
+
 4
 6
 5 1 4 2
@@ -36,3 +38,8 @@ prefix sum, suffix sum이 있는데, 기업형 코테에서는 prefix sum 정도
 
 스택: 가장 앞에 있는 것만 참조 가능
 큐: 가장 뒤에 있는 것만 참조 가능
+
+## 1-O 1
+
+- 입력을 계속 받기 while + scanf + EOF
+- 모듈러 연산
