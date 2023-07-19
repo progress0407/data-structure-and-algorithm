@@ -37,11 +37,11 @@ void dfs(int x, int y) {
 
         if (x + dx < 0 || x + dx >= 10 || y + dy < 0 || y + dy >= 10)
             continue;
-        cout << "arr: " << arr[x + dx][y + dy] << "\n";
-        cout << "vis: " <<  vis[x + dx] << "\n";
-        if (arr[x + dx][y + dy] && !vis[x + dx]) {
+        cout << "current arr: " << arr[x + dx][y + dy] << "\n";
+        cout << "to vis: " << vis[x + dx] << "\n";
+        if (arr[x + dx][y + dy] == 1 && !vis[x + dx]) {
             vis[x + dx] = true;
-            cout << "visit: " << x + dx << "\n";
+            cout << "visited: " << x + dx << "\n";
             dfs(x + dx, y + dy);
         }
     }
