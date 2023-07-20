@@ -79,15 +79,29 @@ if(stk.size() && stk.top())
 stk.size() 등으로 스택에 원소 존재 유무를 먼저 체크하자.
 그래야 뒷부분에 참조 에러를 막을 수 있다 
 
-
 ## Queue & Pair
 
+주어진 코드
 ```c++
+queue<pair<int, int>> q;
+```
+
+넣기
+
+```c++
+q.push({3, 4});
+q.emplace(3, 4);
 q.push(make_pair(3, 4));
 ```
 
-위 코드를 아래처럼 축약 가능
+꺼내기
 
 ```c++
-q.emplace(3, 4);
+tie(y, x) = q.front(); q.pop(); 
 ```
+
+## 반례 찾기
+
+- 최소 ~ 최대
+  - 1 ~ 10
+- 없거나 있거나
