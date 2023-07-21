@@ -17,7 +17,7 @@ int y, x;
 int dy[] = {-1, 0, 1, 0};
 int dx[] = {0, 1, 0, -1};
 
-int mapp[54][54];
+int ma[54][54];
 bool vis[54][54];
 
 void dfs(int y, int x) {
@@ -28,7 +28,7 @@ void dfs(int y, int x) {
         int nx = x + dx[i];
 
         if (ny < 0 || ny >= n || nx < 0 || nx >= m) continue;
-        if (mapp[ny][nx] == 1 && !vis[ny][nx]) {
+        if (ma[ny][nx] == 1 && !vis[ny][nx]) {
             dfs(ny, nx);
         }
     }
@@ -44,19 +44,19 @@ int main() {
 
     while (tc-- > 0) {
         // 초기화
-        fill(&mapp[0][0], &mapp[0][0] + 54 * 54, 0);
+        fill(&ma[0][0], &ma[0][0] + 54 * 54, 0);
         fill(&vis[0][0], &vis[0][0] + 54 * 54, 0);
 
         cin >> m >> n >> k;
         for (int i = 0; i < k; i++) {
             cin >> x >> y;
-            mapp[y][x] = 1;
+            ma[y][x] = 1;
         }
 
         int res = 0;
         for (int y = 0; y < n; y++) {
             for (int x = 0; x < m; x++) {
-                if (mapp[y][x] == 1 && !vis[y][x]) {
+                if (ma[y][x] == 1 && !vis[y][x]) {
                     res++;
                     dfs(y, x);
                 }
