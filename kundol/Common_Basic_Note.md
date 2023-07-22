@@ -105,3 +105,67 @@ tie(y, x) = q.front(); q.pop();
 - 최소 ~ 최대
   - 1 ~ 10
 - 없거나 있거나
+
+## 참조 변경하기
+
+[결론]
+
+```c++
+for (auto& r : table) {  // Note the & which means we are using a reference
+    if (r.num == tmp) {
+        r.cnt++;
+    }
+}
+```
+
+아래와 같은 코드가 있을때, 원본의 record는 수정되지 않는다
+
+```cpp
+struct Record {
+    int num;
+    int cnt;
+    int order;
+};
+
+vector<Record> table;
+
+    for (auto r: table) {
+        if (r.num == tmp) {
+            r.cnt++;
+        }
+    }
+```
+
+## 연속된 입력 + IO 초기화 로직
+
+IO 초기화 로직이 있으면 정상 동작하지 않는다  
+
+(아래 예시 코드)
+
+```c++
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
+
+while (true) {
+    cin >> s;
+    cout << s << "\n";
+}
+```
+
+## `string.size() - 숫자` 는 조심해야 한다!!
+
+underflow가 일어난다
+
+## 알파벳인지?
+
+```c++
+isalpha(c)
+```
+
+위는 아래 코드와 같다
+
+```c++
+('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z')
+```
+
