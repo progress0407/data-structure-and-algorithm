@@ -45,7 +45,6 @@ bool isB(string &str) {
     return true;
 }
 
-
 bool isC(string &str) {
 
     int strSize = str.size();

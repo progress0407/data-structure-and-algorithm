@@ -62,4 +62,14 @@
 
 ## 2-I 알파벳 개수
 
+- 숫자로 100글자는 아주 크다!
+  - int는 10글자에 블과함
+  - long long -> 10^18, 19바이트 정도
+- `big int` or `string` 
+  - big int는 너무 번거롭다..
+
+- public TC (O)
+- private (X)
+
+## 2-J 10709번 - 기상캐스터
 
