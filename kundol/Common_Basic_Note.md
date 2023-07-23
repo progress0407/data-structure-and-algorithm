@@ -169,3 +169,9 @@ isalpha(c)
 ('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z')
 ```
 
+## ` ios_base::sync_with_stdio(false);cin.tie(NULL); cout.tie(NULL);`
+
+- 연속된 값을 입력 받을 때 사용하면 내 노트북에서 제대로 작동되지 않는 증상이 있다
+- 그러나 코테 제출할 때는 위 코드가 있어야 정상 작동할 때가 있다
+  - `https://www.acmicpc.net/problem/3474`
+

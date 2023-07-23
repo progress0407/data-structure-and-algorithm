@@ -12,7 +12,7 @@ void someFunc(string str) {
 /**
  * Deep Copy
  */
-void someFunc2(string &str) {
+void someFunc2(string& str) {
     str[0] = '_';
 }
 

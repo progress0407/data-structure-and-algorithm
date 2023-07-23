@@ -6,4 +6,15 @@
 filename=$1
 
 # Compile and run the program.
-g++ -std=c++14 -Wall $filename -o ./run.exe && ./run.exe
+g++ -std=c++14 -Wall $filename -o ./run.exe && {
+
+    echo "[ Compiled Successfully !! Run Now! ]"
+    echo "--------------------------------------"
+    echo ""
+
+    ./run.exe
+
+
+    echo ""
+    echo "--------------------------------------"
+}
