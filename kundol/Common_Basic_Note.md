@@ -53,8 +53,7 @@ v.erase(b.begin() + 인덱스);
 
 값으로 지우기 (하아..)
 ```c++
-v.erase(remove(v.begin(), v.end(), 값),
-        v.end());
+v.erase(remove(v.begin(), v.end(), 값), v.end());
 ```
 
 ## `exit(0);`
