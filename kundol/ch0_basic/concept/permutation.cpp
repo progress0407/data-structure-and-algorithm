@@ -42,6 +42,3 @@ void permutation_3() {
 int main() {
     permutation_3();
 }
-
-
-
