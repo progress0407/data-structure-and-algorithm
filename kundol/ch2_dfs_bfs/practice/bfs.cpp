@@ -10,12 +10,12 @@ void bfs(int init) {
     visited[init] = 1;
 
     while (!q.empty()) {
-        int here = q.front();
+        int from = q.front();
         q.pop();
-        for (auto to: adj[here]) {
+        for (auto to: adj[from]) {
             if (visited[to]) continue;
             q.push(to);
-            visited[to] = visited[here] + 1;
+            visited[to] = visited[from] + 1;
         }
     }
 }

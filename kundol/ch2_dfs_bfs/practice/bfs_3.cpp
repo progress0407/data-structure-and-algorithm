@@ -7,16 +7,17 @@ int wei[100];
 void bfs(int init) {
     
     queue<int> q;
-
     wei[init] = 1;
     q.push(init);
-    
-    while(q.size()) {
-        int here = q.front(); q.pop();
 
-        for(auto& there: adj[here]) {
-            wei[there] = wei[here] + 1;
-            q.push(there);
+    while(q.size()) {
+        
+        int from = q.front(); q.pop();
+        for(int& to: adj[from]) {
+            if(wei[to] > 0) continue;
+            
+            wei[to] = wei[from] + 1;
+            q.push(to);
         }
     }
 }
