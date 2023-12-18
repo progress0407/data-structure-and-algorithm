@@ -1,4 +1,4 @@
-package io.philo.codingtest.ch_0__basic
+package io.philo.codingtest.ch_0__basic._1__이론
 
 /**
  * 중복 없애기
