@@ -1,25 +1,19 @@
 package io.philo.codingtest.ch_1__big_o._2__실습
 
-import java.util.*
-
 /**
- * 직접 푼것 Fail T.T
+ * 메모리 초과
  */
-fun main(args: Array<String>) = with(Scanner(System.`in`)) {
+fun main() {
 
-    val arr = Array(9) { nextInt() }
+    val N = readln().toInt()
+    val M = readln().toInt()
 
-    val list: List<List<Int>> = combinations(arr, 7)
+    val list = readln().split(" ").map { it.toInt() }
 
-    for (ints in list) {
-        if (ints.sum() == 100) {
-            printAnswer(ints)
-        }
-    }
-}
+    val combiList = combinations(list, 2)
 
-fun printAnswer(ints: List<Int>) {
-    ints.sorted().forEach { println(it) }
+    val result = combiList.filter { it.sum() == M }.size
+    println(result)
 }
 
 private fun <T> combinations(list: List<T>, size: Int): List<List<T>> {
