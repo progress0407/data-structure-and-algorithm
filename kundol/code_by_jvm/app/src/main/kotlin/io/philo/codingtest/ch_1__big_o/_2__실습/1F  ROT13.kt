@@ -47,8 +47,7 @@ private fun smallAlphabetTranslator(asciiNum: Int): Char {
     val endLimit = 'z'.code
 
     if (asciiNum + 13 > endLimit) {
-        val rest = 13 - (endLimit - asciiNum + 1)
-        return (startLimit + rest).toChar()
+        return (asciiNum + 13 - 26).toChar()
     } else {
         return (asciiNum + 13).toChar()
     }
