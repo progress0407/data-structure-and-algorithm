@@ -11,6 +11,7 @@ fun main() {
     println(a[0][0])
     */
 
+    // 인접 행렬
     val (arr, visArr) = `2D Rectangle Array`(10) // 0 ~ 9 정사각형
     arr.mapEachOther(1, 2)
     arr.mapEachOther(1, 3)
