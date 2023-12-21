@@ -1,4 +1,4 @@
-package io.philo.codingtest.ch_1__big_o._2__실습
+package io.philo.codingtest.ch_1__big_o._2__문제
 
 /**
  * 메모리 초과
