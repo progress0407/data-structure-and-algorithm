@@ -2,7 +2,7 @@
 
 using namespace std;
 
- // 배열
+// 배열
 void permutation_1() {
     int a[] = {1, 2, 3};
 
