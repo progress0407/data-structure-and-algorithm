@@ -1,9 +1,6 @@
 package io.philo.codingtest.ch_2__d_bfs._2__문제._2B_배추
 
 /**
- * Runtime 에러
- */
-/**
  * t: 테스트 케이스
  *
  * m: 가로 길이
@@ -30,7 +27,7 @@ private var k: Int = 0
 
 fun main() {
 
-    val t = readln().map { it.code }[0]
+    val t = readln().toInt()
 
     repeat(t) { index ->
 
