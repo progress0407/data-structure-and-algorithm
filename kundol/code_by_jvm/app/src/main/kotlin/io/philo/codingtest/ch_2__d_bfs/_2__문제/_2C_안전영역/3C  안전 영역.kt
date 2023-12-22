@@ -1,9 +1,9 @@
-package io.philo.codingtest.ch_2__d_bfs._2__문제._3C_안전영역
+package io.philo.codingtest.ch_2__d_bfs._2__문제._2C_안전영역
 
 private val dy = intArrayOf(1, 0, -1, 0)
 private val dx = intArrayOf(0, 1, 0, -1)
 private var n = 0
-private val cntArr = IntArray(10)
+private val cntArr = IntArray(101)
 
 private lateinit var mapp: Array<IntArray>
 private lateinit var digitMapp: Array<IntArray>
@@ -25,7 +25,7 @@ fun main() {
 
 //    mapp.forEach { println(it.contentToString()) }
 
-    for (rainHeight in 1..9) {
+    for (rainHeight in 1..100) {
 
         digitMapp = Array(n) { IntArray(n) { 1 } }
         vis = Array(n) { IntArray(n) }
