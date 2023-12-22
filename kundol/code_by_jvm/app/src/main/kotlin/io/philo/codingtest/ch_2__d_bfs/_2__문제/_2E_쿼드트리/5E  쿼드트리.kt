@@ -1,4 +1,4 @@
-package io.philo.codingtest.ch_2__d_bfs._2__문제._5E_쿼드트리
+package io.philo.codingtest.ch_2__d_bfs._2__문제._2E_쿼드트리
 
 /**
  *
