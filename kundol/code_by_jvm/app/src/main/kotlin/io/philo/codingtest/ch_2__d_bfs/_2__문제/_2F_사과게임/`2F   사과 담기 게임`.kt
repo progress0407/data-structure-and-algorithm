@@ -1,4 +1,4 @@
-package io.philo.codingtest.ch_2__d_bfs._2__문제._2F_사과
+package io.philo.codingtest.ch_2__d_bfs._2__문제._2F_사과게임
 
 /**
  * n: 스크린 크기

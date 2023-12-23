@@ -1,4 +1,4 @@
-package io.philo.codingtest.ch_2__d_bfs._2__문제._2G
+package io.philo.codingtest.ch_2__d_bfs._2__문제._2G_빈도정렬
 
 /**
  * 정렬 순서
@@ -21,15 +21,10 @@ fun main() {
         }
     }
 
-    val sorted = numGroups.sortedWith(compareBy({ it.cnt }, { it.firstPos }))
-
-    println("numGroups = ${numGroups}")
-    println("numList = ${numList}")
-
+    val sorted = numGroups.sortedWith(compareBy({ -it.cnt }, { it.firstPos }))
+    val result = sorted.flatMap { numGroup -> List(numGroup.cnt) { numGroup.num } }
+    println(result.joinToString(" "))
 }
 
-private data class NumGroup(public val num: Int, var cnt: Int = 0, val firstPos: Int) {
-}
-
-private data class Foo(val a: Int, var b: Int) {
+private data class NumGroup(val num: Int, var cnt: Int = 1, val firstPos: Int) {
 }
