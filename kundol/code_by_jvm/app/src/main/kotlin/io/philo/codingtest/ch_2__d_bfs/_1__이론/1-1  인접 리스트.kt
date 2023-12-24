@@ -2,7 +2,7 @@ package io.philo.codingtest.ch_2__d_bfs._1__이론
 
 fun main() {
     val V = 4
-    val adj = Array<MutableList<Int>>(V) { mutableListOf() }
+    val adj = Array(V) { mutableListOf<Int>() }
 
     adj[0].addAll(listOf(1, 2, 3))
     adj[1].addAll(listOf(0, 2))
