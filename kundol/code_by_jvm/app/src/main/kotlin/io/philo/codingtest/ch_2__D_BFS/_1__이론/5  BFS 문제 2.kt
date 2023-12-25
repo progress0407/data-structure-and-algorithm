@@ -2,14 +2,8 @@ package io.philo.codingtest.ch_2__D_BFS._1__이론
 
 import java.util.LinkedList
 
-//private var dy = intArrayOf(1, 0, -1, 0)
-//private var dx = intArrayOf(0, 1, 0, -1)
-private var ds = arrayOf(
-    Point(1, 0),
-    Point(-1, 0),
-    Point(0, 1),
-    Point(0, -1)
-)
+private var dy = intArrayOf(1, 0, -1, 0)
+private var dx = intArrayOf(0, 1, 0, -1)
 
 private lateinit var mapp: Array<IntArray>
 private lateinit var vis: Array<IntArray>
@@ -49,73 +43,32 @@ fun main() {
         mapp[y] = readln().split(" ").map { it.toInt() }.toIntArray()
     }
 
-    mapp.forEach { println(it.contentToString()) }
-
-    val queue = LinkedList<Point>()
-    queue.add(Point(sy, sx))
+    val queue = LinkedList<Pair<Int, Int>>()
+    queue.add(Pair(sy, sx))
     vis[sy][sx] = 1
 
     while (queue.isNotEmpty()) {
+
         val here = queue.poll()
-        println("here = ${here}")
-        for (d in ds) {
-//            val ny = here.y + dy[i]
-//            val nx = here.x + dx[i]
-            val n = here + d
-            if (n.y in 0..my - 1 &&
-                n.x in 0..mx - 1 &&
-                mapp[n.y][n.x] == 1 &&
-                vis[n.y][n.x] == 0
-            ) {
-                vis[n.y][n.x] = vis[here.y][here.x] + 1
-                queue.add(n)
+
+        for (i in 0..3) {
+            val y = here.first
+            val x = here.second
+
+            val ny = y + dy[i]
+            val nx = x + dx[i]
+
+            if (ny in 0..my - 1 &&
+                nx in 0..mx - 1 &&
+                mapp[ny][nx] == 1 &&
+                vis[ny][nx] == 0) {
+
+                vis[ny][nx] = vis[y][x] + 1
+                queue.add(here)
             }
         }
     }
 
-    println("vis[ey][ex] = ${vis[ey][ex]}")
+    println("${vis[ey][ex]}")
     vis.forEach { println(it.contentToString()) }
 }
-
-private data class Point(val y: Int, val x: Int) {
-
-    operator fun plus(other: Point): Point {
-        return Point(this.y + other.y, this.x + other.x)
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

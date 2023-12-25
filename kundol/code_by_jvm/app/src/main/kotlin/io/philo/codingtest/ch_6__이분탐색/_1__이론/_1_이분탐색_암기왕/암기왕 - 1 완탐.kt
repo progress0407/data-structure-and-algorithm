@@ -1,7 +1,9 @@
-package io.philo.codingtest.ch_6__이분탐색._1__이론
+package io.philo.codingtest.ch_6__이분탐색._1__이론._1_이분탐색_암기왕
 
 /**
  * 이분 탐색을 이용한 풀이
+ *
+ * 메모리 초과
  */
 fun main() {
     val t = readln().toInt()

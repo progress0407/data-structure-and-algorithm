@@ -1,4 +1,4 @@
-package io.philo.codingtest.ch_6__이분탐색._1__이론
+package io.philo.codingtest.ch_6__이분탐색._1__이론._1_이분탐색_암기왕
 
 /**
  * 완전 탐색
