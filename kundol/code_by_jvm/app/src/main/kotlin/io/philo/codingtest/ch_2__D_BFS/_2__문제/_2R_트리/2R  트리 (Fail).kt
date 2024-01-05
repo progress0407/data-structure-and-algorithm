@@ -21,6 +21,7 @@ fun main() {
     dfs(root)
 
     println(cnt) // answer
+
 }
 
 private fun handleException(): Boolean {
