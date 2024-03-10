@@ -2,23 +2,11 @@ import itertools
 
 
 if __name__ == "__main__":
-    # data = list(map(int, input().split()))
-    # print(data)
+    # for i in range(1,3):
+    #     print(i)
 
-    # a,b,c = map(int, input().split())
-    # print(f"a, b, c = {a, b, c}")
-
-    # res = [1,2,3]
-    # print(*res)
-
-    # vis = [[False] * 3 for _ in range(3)]
-    # print(vis)
-
-    # print([1 for _ in range(3)])
-
-    # n_arr = [n * 3 for n in [1,2,3]]
-    # print(*n_arr)
-
-    arr = itertools.combinations([1, 2, 3], 2)
-    for v in arr:
-        print(*v)
+    str = "abc"
+    rev_str = ''
+    for c in str:
+        rev_str = c + rev_str
+    print(rev_str)
