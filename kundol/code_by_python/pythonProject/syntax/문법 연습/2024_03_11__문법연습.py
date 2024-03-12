@@ -13,6 +13,6 @@ if __name__ == "__main__":
     # arr.sort()
     # print(arr)
 
-    st = 0
-    ed = 0
-    print(st, ed)
+    stk = [1,2,3]
+    stk2 = []
+    print()
