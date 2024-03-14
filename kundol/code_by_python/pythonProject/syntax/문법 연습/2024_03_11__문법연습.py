@@ -1,5 +1,11 @@
 import itertools
 
+cnt = 0
+
+def dfs(y, x):
+    global cnt
+    cnt += 1
+
 if __name__ == "__main__":
     # str = "abcdef"
     # print(str[1:3])
@@ -16,3 +22,5 @@ if __name__ == "__main__":
     stk = [1,2,3]
     stk2 = []
     print()
+
+
