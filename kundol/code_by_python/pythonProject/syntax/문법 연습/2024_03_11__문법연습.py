@@ -19,8 +19,15 @@ if __name__ == "__main__":
     # arr.sort()
     # print(arr)
 
-    stk = [1,2,3]
-    stk2 = []
-    print()
+    # stk = [1,2,3]
+    # stk2 = []
+    # print()
 
+    # print("a" in "ab")
+    # print("a" not in "ab")
 
+    chs = [chr(i) for i in range(ord('a'), ord('z'))]
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    for v in vowels:
+        chs.remove(v)
+    print(chs)
