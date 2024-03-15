@@ -26,8 +26,12 @@ if __name__ == "__main__":
     # print("a" in "ab")
     # print("a" not in "ab")
 
-    chs = [chr(i) for i in range(ord('a'), ord('z'))]
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    for v in vowels:
-        chs.remove(v)
-    print(chs)
+    # a = 12
+    # print(f'{a:05}')
+
+    stk=[]
+    stk.append(1)
+    stk.append(2)
+    stk.append(3)
+    stk.pop()
+    print(stk)
