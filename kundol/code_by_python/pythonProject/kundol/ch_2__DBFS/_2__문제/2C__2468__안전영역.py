@@ -44,13 +44,13 @@ for h in range(0, max_h + 1):
             if mapp[y][x] <= h:
                 _map[y][x] = 0
 
-    cnt = 0
+    one_loop_area = 0
     for y in range(n):
         for x in range(n):
             if _map[y][x] == 1 and vis[y][x] == 0:
                 dfs(y, x)
-                cnt += 1
-    max_cnt = max(cnt, max_cnt)
+                one_loop_area += 1
+    max_cnt = max(one_loop_area, max_cnt)
     # print(f'h={h}, cnt = {cnt}')
 # print(f'max_cnt = {max_cnt}')
 print(max_cnt)

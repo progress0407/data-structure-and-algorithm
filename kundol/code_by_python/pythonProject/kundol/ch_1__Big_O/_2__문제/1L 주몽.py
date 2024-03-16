@@ -11,9 +11,9 @@ if m > 200000:
 
 combinations = list(itertools.combinations(li, 2))
 
-cnt = 0
+one_loop_area = 0
 for combination in combinations:
     if sum(combination) == m:
-        cnt += 1
+        one_loop_area += 1
 
-print(cnt)
+print(one_loop_area)

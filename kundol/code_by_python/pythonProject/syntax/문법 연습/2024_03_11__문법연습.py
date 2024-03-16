@@ -1,10 +1,12 @@
 import itertools
 
-cnt = 0
+one_loop_area = 0
+
 
 def dfs(y, x):
-    global cnt
+    global one_loop_area
     cnt += 1
+
 
 if __name__ == "__main__":
     # str = "abcdef"
@@ -29,9 +31,16 @@ if __name__ == "__main__":
     # a = 12
     # print(f'{a:05}')
 
-    stk=[]
-    stk.append(1)
-    stk.append(2)
-    stk.append(3)
-    stk.pop()
-    print(stk)
+    # stk=[]
+    # stk.append(1)
+    # stk.append(2)
+    # stk.append(3)
+    # stk.pop()
+    # print(stk)
+
+    adj = [[] for _ in range(3)]
+    adj[0].extend([1, 2])
+    adj[1].extend([3])
+    adj[2].extend([5])
+
+    print(adj)

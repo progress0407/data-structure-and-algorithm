@@ -22,7 +22,7 @@ def dfs(y, x):
 for _ in range(tc):
     # 가로, 세로, 배추 위치 갯수
     m, n, k = map(int, input().split())
-    cnt = 0
+    one_loop_area = 0
 
     mapp = [[0 for _ in range(m)] for _ in range(n)]
     vis = copy.deepcopy(mapp)
@@ -36,6 +36,6 @@ for _ in range(tc):
             if 0 <= y < n and 0 <= x < m and mapp[y][x] == 1 and vis[y][x] == 0:
                 vis[y][x] = 1
                 dfs(y, x)
-                cnt += 1
+                one_loop_area += 1
 
-    print(cnt)
+    print(one_loop_area)

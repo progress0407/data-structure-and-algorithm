@@ -22,7 +22,7 @@ def dfs(y, x, s):
     return s
 
 
-cnt = 0
+one_loop_area = 0
 for _ in range(k):
     lx, ly, hx, hy = map(int, input().split())
 
@@ -36,8 +36,8 @@ for y in range(m):
         if a[y][x] == 1 and vis[y][x] == 0:
             sec = dfs(y, x, 0)
             sec_list.append(sec)
-            cnt += 1
+            one_loop_area += 1
 
 sec_list.sort()
-print(cnt)
+print(one_loop_area)
 print(' '.join(map(str, sec_list)))

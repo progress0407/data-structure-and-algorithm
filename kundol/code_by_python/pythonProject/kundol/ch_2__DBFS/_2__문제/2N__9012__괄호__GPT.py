@@ -1,37 +1,18 @@
-ps = ['[', ']', '(', ')']
+T = int(input())  # 테스트 케이스의 수
 
+for _ in range(T):
+    ps = input()  # 괄호 문자열 입력
+    count = 0  # 괄호의 균형을 확인하기 위한 카운터
 
-def check_by_stack(ps_st):
-    stk = []
-    for cur_ch in ps_st:
-        if len(stk) == 0 and (cur_ch == ')' or cur_ch == ']'):
-            stk.append(cur_ch)
-            break
+    for char in ps:
+        if char == '(':
+            count += 1
         else:
-            if len(stk) == 0:
-                stk.append(cur_ch)
-            else:
-                last = stk[-1]
-                if (last == '(' and cur_ch == ')') or (last == '[' and cur_ch == ']'):
-                    stk.pop()
-                else:
-                    stk.append(cur_ch)
-    if len(stk) == 0:
-        print('yes')
+            count -= 1
+            if count < 0:  # 닫는 괄호가 더 많아진 경우
+                break
+
+    if count == 0:
+        print("YES")
     else:
-        print('no')
-
-
-while True:
-    ps_st_input = input()
-
-    if ps_st_input == '.':
-        print('yes')
-        break
-
-    ps_st = []
-    for ch in ps_st_input:
-        if ch in ps:
-            ps_st.append(ch)
-
-    check_by_stack(ps_st)
+        print("NO")

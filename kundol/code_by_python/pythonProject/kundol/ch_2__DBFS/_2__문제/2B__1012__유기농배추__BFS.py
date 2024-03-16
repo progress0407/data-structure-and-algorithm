@@ -23,7 +23,7 @@ for _ in range(tc):
     m, n, k = map(int, input().split())
     mapp = [[0 for _ in range(m)] for _ in range(n)]
     vis = copy.deepcopy(mapp)
-    cnt = 0
+    one_loop_area = 0
 
     for _ in range(k):
         x, y = map(int, input().split())
@@ -33,6 +33,6 @@ for _ in range(tc):
         for x in range(m):
             if mapp[y][x] == 1 and vis[y][x] == 0:
                 bfs(y, x)
-                cnt += 1
+                one_loop_area += 1
 
-    print(cnt)
+    print(one_loop_area)

@@ -4,7 +4,7 @@ dx = [0, 1, 0, -1]
 n, m = map(int, input().split())
 mapp = [list(map(int, input().split())) for _ in range(n)]
 vis = [[0 for _ in range(m)] for _ in range(n)]
-cnt = 0
+one_loop_area = 0
 
 
 def dfs(y, x):
@@ -20,9 +20,9 @@ for y in range(n):
     for x in range(m):
         if mapp[y][x] == 1 and vis[y][x] == 0:
             dfs(y, x)
-            cnt += 1
+            one_loop_area += 1
 
-print(cnt)
+print(one_loop_area)
 
 # 5 5
 # 1 0 1 0 1
