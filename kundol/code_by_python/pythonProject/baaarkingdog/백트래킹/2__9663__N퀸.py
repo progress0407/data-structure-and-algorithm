@@ -1,27 +1,33 @@
-from copy import deepcopy
+def bactrack(y):
+    global cnt
 
-dy = [-1, 0, 1, 0, -1, -1, 1, 1]
-dx = [0, 1, 0, -1, 1, -1, 1, -1]
+    if y == N:
+        cnt += 1
+        return
 
-N = int(input())
-
-pure_mapp = [[0 for _ in range(N)] for _ in range(N)]
-
-# 0 빈공간
-# 1 퀸 착수 지점
-# 2 퀸을 놓을 수 없는 곳
-
-for y in range(N):
     for x in range(N):
-        mapp = deepcopy(pure_mapp)
-        if mapp[y][x] == 0:
-            mapp[y][x] = 1
+        if is_used_1[x] or is_used_2[x + y] or is_used_3[x - y + N - 1]:
+            continue
 
-        ny = y
-        nx = x
-        for i in range(8):
-            while 0 <= nx < N and 0 <= ny < N:
-                ny += dy[i]
-                nx += dx[i]
-                if mapp[ny][nx] == 0:
-                    mapp[ny][nx] = 2
+        is_used_1[x] = True
+        is_used_2[x + y] = True
+        is_used_3[x - y + N - 1] = True
+
+        bactrack(y + 1)
+
+        is_used_1[x] = False
+        is_used_2[x + y] = False
+        is_used_3[x - y + N - 1] = False
+
+
+if __name__ == '__main__':
+    N = int(input())
+
+    is_used_1 = [False for _ in range(N)]
+    is_used_2 = [False for _ in range(2 * N - 1)]
+    is_used_3 = [False for _ in range(2 * N - 1)]
+    cnt = 0
+
+    bactrack(0)
+
+    print(cnt)
